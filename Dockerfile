@@ -14,7 +14,7 @@ COPY --from=ollama_source /usr/bin/ollama /usr/bin/ollama
 WORKDIR /app
 
 # Install Python dependencies
-RUN pip install --no-cache-dir fastapi uvicorn requests
+RUN pip install --no-cache-dir fastapi uvicorn httpx
 
 COPY main.py .
 
